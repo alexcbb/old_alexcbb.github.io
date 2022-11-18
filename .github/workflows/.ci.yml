@@ -22,5 +22,13 @@ jobs:
 
       - name: Sphinx build
         run: |
-          make -C docs clean
-          make -C docs html
+          sphinx-build doc build
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/
+          force_orphan: true

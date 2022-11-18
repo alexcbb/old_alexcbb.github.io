@@ -1,17 +1,6 @@
-# Welcome to MkDocs
+# Disentangled latent manipulation feature space learning
+A thesis pursued by Alexandre Chapin and supervised by Liming Chen and Emmanuel Dellandrea
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## About Me
+Hi, I'm Alexandre Chapin, my goal is to ...
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

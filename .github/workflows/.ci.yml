@@ -5,16 +5,24 @@ on:
     branches:
       - master 
 jobs:
-  deploy:
+  steps:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material 
-      - run: pip install sphinx
-      - run: pip install sphinx-rtd-theme
-      - run: pip install myst_parser
-      - run: pip install sphinx_design
-      - run: make html
+      - name: Install Dependencies
+      - run: |
+          pip install sphinx sphinx-rtd-theme myst_parser sphinx_design
+      - name: Sphinx build
+      - run: |
+          sphinx-build source build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pahes@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/
+          force_orphan: true

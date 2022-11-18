@@ -5,7 +5,7 @@ on:
     branches:
       - master 
 jobs:
-  steps:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,8 +19,7 @@ jobs:
       - run: |
           sphinx-build source build
       - name: Deploy
-        uses: peaceiris/actions-gh-pahes@v3
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}

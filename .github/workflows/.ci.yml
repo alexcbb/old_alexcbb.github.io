@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - master 
-
-
       - main
 jobs:
   deploy:
@@ -17,6 +15,8 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material 
-
-
-      - run: mkdocs gh-deploy --force
+      - run: pip install sphinx
+      - run: pip install sphinx-rtd-theme
+      - run: pip install myst_parser
+      - run: pip install sphinx_design
+      - run: ./docs/make html

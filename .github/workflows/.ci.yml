@@ -19,4 +19,4 @@ jobs:
       - run: pip install sphinx-rtd-theme
       - run: pip install myst_parser
       - run: pip install sphinx_design
-      - run: make html
+      - run: ./../../make html

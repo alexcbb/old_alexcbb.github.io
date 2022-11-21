@@ -18,7 +18,7 @@
 
                .. div:: sd-fs-4 sd-weight-bold
 
-                  Hi, my name is Alexandre. My goal is to develop an artificial intelligence that could...
+                  Hi, my name is Alexandre. 
 
          .. grid-item-card::
             :shadow: none
@@ -43,10 +43,23 @@
 
 Research
 ------------------------
-My research aims at ...
+My research aims at developping an artificial intelligence that could easily generalize across different tasks and environments. To accomplish such a thing, an Agent
 
 - **Latent space** :
 - **Transformers** :
+
+
+.. toctree::
+   :hidden:
+   :caption: My Thesis:
+
+   self
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Reinforcement learning:
+
+   ./articles/reinforcement_learning.rst
 
 .. toctree::
    :maxdepth: 1

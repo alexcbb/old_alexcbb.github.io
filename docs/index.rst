@@ -43,10 +43,16 @@
 
 Research
 ------------------------
-My research aims at developping an artificial intelligence that could easily generalize across different tasks and environments. To accomplish such a thing, an Agent
+Today, robots are mainly limited to accomplish *specific tasks* in already *known environments*. My goal is to develop an artificial intelligence that could permit to
+easily generalize across tasks and environments. To do so, I'm currently studying **disentangled representation learning** to leverage its differents theoritical advantage
+for robotics : data-efficiency, generalization, transferability or also interpretability.
 
-- **Latent space** :
-- **Transformers** :
+My thesis will be splitted in the following components :
+
+- **T1 - Disentangled latent representation of the observed environment**
+- **T2 - Latent action space**
+- **T3 - Dynamic-aware embeddings**
+- **T4 - Transfer learning**
 
 
 .. toctree::
@@ -57,21 +63,40 @@ My research aims at developping an artificial intelligence that could easily gen
 
 .. toctree::
    :maxdepth: 1
-   :caption: Reinforcement learning:
+   :caption: Concepts introduction :
 
    ./articles/reinforcement_learning.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Latent space:
-
    ./articles/latent_space.rst
+   ./articles/transformers.rst
 
 .. toctree::
    :maxdepth: 1
-   :caption: Transformers:
+   :caption: Disentangled latent representation:
 
-   ./articles/transformers.rst
+   ./articles/T1/disentangled.rst
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Latent action space:
+
+   ./articles/T2/action_space.rst
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Dynamic-aware embeddings:
+
+   ./articles/T3/dynamic.rst
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Transfer learning:
+
+   ./articles/T4/transfer.rst
+
+
+
 
 
 
